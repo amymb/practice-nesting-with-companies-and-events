@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'companies#index'
   resources :companies do
-    resources :events, shallow: true
+    resources :events
   end
   get 'sign_up', to: "registrations#new"
   post 'sign_up', to: "registrations#create"

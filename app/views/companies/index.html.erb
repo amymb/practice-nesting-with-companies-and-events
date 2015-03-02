@@ -1,5 +1,9 @@
-<%=link_to "Sign Up", sign_up_path%>
 
+<%if current_user%>
+current user is <%=current_user.email%>
+<%else%>
+<%=link_to "Sign Up", sign_up_path%>
+<%end%>
 <%=flash[:notice]%>
 <br>
 <%@companies.each do |company|%>

@@ -1,3 +1,4 @@
 <%=@company.name%>
+<%=link_to "Events", company_events_path(@company, @events)%>
 <%=link_to "Edit", edit_company_path%>
 <%=link_to "Delete", @company, method: :delete%>

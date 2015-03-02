@@ -1,0 +1,8 @@
+
+<%=flash[:notice]%>
+<br>
+<%@events.each do |event|%>
+<%=link_to event.title, company_event_path(@company, event)%>
+<%end%>
+
+<%=link_to "New Event", new_company_event_path%>
