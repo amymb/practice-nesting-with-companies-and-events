@@ -1,0 +1,9 @@
+<%=link_to "Sign Up", sign_up_path%>
+
+<%=flash[:notice]%>
+<br>
+<%@companies.each do |company|%>
+<%=link_to company.name, company%>
+<%end%>
+
+<%=link_to "New Company", new_company_path%>
